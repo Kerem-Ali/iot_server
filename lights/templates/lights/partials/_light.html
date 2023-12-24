@@ -1,0 +1,16 @@
+{% load static  %}
+<div class="card mb-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="{% url "light_details" light.id %}">
+                        {{light.name}}
+                    </a>
+                </h5>
+                <p class="card-text">{{light.ip|truncatechars:50}}</p>
+                <p>{{light.is_on}}</p>
+            </div>
+        </div>
+    </div>
+</div>
